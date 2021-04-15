@@ -1,0 +1,87 @@
+ 
+****************************************
+Report : resources
+Design : risc_v
+Version: O-2018.06-SP4
+Date   : Thu Apr 15 14:19:26 2021
+****************************************
+
+
+Resource Report for this hierarchy in file ../src/FETCH/MUX21_32b.vhd
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| add_x_2        | DW01_add       | width=32   | fetch/PC_add/add_16 (PCadder.vhd:16) |
+| add_x_9        | DW01_add       | width=32   | decode/address_adder/add_20 (adder.vhd:20) |
+| eq_x_15        | DW_cmp         | width=5    | decode/branch_fwd_unit/eq_61_4 (branch_forward_unit.vhd:61) |
+| eq_x_17        | DW_cmp         | width=5    | decode/branch_fwd_unit/eq_78_4 (branch_forward_unit.vhd:78) |
+| eq_x_21        | DW_cmp         | width=32   | decode/branch_check/eq_28 (branch_evaluator.vhd:28) |
+| eq_x_34        | DW_cmp         | width=5    | execute/forward_control/eq_58_4 (forwarding_unit.vhd:58) |
+| eq_x_36        | DW_cmp         | width=5    | execute/forward_control/eq_74_4 (forwarding_unit.vhd:74) |
+| sra_48         | DW_sra         | A_width=32 | execute/the_ALU/sra_35 (ALU.vhd:35) |
+        |                | SH_width=31 |                           |
+| eq_x_50        | DW_cmp         | width=5    | memory/fwd_control/eq_30_2 (mem_forwarding.vhd:30) |
+| eq_x_54        | DW_cmp         | width=5    | decode/branch_fwd_unit/eq_57_2 (branch_forward_unit.vhd:57) |
+ |            | decode/branch_fwd_unit/eq_61_3 (branch_forward_unit.vhd:61) |
+ |            | decode/hazard/eq_43_2 (hazard_unit.vhd:43) |
+| eq_x_55        | DW_cmp         | width=5    | decode/branch_fwd_unit/eq_74_2 (branch_forward_unit.vhd:74) |
+ |            | decode/branch_fwd_unit/eq_78_3 (branch_forward_unit.vhd:78) |
+ |            | decode/hazard/eq_43_3 (hazard_unit.vhd:43) |
+| eq_x_56        | DW_cmp         | width=5    | decode/hazard/eq_31_2 (hazard_unit.vhd:31) |
+ |                |            | decode/hazard/eq_38_2 (hazard_unit.vhd:38) |
+ |                |            | decode/hazard/eq_55_2 (hazard_unit.vhd:55) |
+| eq_x_57        | DW_cmp         | width=5    | decode/hazard/eq_31_3 (hazard_unit.vhd:31) |
+ |                |            | decode/hazard/eq_38_3 (hazard_unit.vhd:38) |
+ |                |            | decode/hazard/eq_55_3 (hazard_unit.vhd:55) |
+| eq_x_58        | DW_cmp         | width=5    | execute/forward_control/eq_54_2 (forwarding_unit.vhd:54) |
+    |            | execute/forward_control/eq_58_3 (forwarding_unit.vhd:58) |
+| eq_x_59        | DW_cmp         | width=5    | execute/forward_control/eq_70_2 (forwarding_unit.vhd:70) |
+    |            | execute/forward_control/eq_74_3 (forwarding_unit.vhd:74) |
+| DP_OP_168_126_4392              |            |                            |
+|                | DP_OP_168_126_4392 |        |                            |
+=============================================================================
+
+Datapath Report for DP_OP_168_126_4392
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_168_126_4392   | execute/the_ALU/sub_abs_40 (ALU.vhd:40)             |
+|                      | execute/the_ALU/add_26 (ALU.vhd:26)                 |
+|                      | execute/the_ALU/sub_39 (ALU.vhd:39)                 |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 32    |                                          |
+| I2    | PI   | Signed   | 32    |                                          |
+| I3    | PI   | Unsigned | 1     |                                          |
+| O1    | PO   | Signed   | 32    | addsub(I1,I2,I3) ( ALU.vhd:26 ALU.vhd:39 ALU.vhd:40 ) |
+==============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_x_2            | DW01_add         | pparch (area,speed)                 |
+| add_x_9            | DW01_add         | pparch (area,speed)                 |
+| eq_x_15            | DW_cmp           | apparch (area)     |                |
+| eq_x_17            | DW_cmp           | apparch (area)     |                |
+| eq_x_21            | DW_cmp           | apparch (area)     |                |
+| eq_x_34            | DW_cmp           | apparch (area)     |                |
+| eq_x_36            | DW_cmp           | apparch (area)     |                |
+| sra_48             | DW_sra           | astr (area)        |                |
+| eq_x_50            | DW_cmp           | apparch (area)     |                |
+| eq_x_54            | DW_cmp           | apparch (area)     |                |
+| eq_x_55            | DW_cmp           | apparch (area)     |                |
+| eq_x_56            | DW_cmp           | apparch (area)     |                |
+| eq_x_57            | DW_cmp           | apparch (area)     |                |
+| eq_x_58            | DW_cmp           | apparch (area)     |                |
+| eq_x_59            | DW_cmp           | apparch (area)     |                |
+| DP_OP_168_126_4392 | DP_OP_168_126_4392 | str (area,speed) |                |
+===============================================================================
+
+1

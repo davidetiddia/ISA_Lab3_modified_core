@@ -1,0 +1,106 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'risc_v' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : risc_v
+Version: O-2018.06-SP4
+Date   : Thu Apr 15 14:09:23 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: ex_mem_pipeline_register/RegDest_out_reg[2]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: ex_mem_pipeline_register/ALU_output_out_reg[30]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  risc_v             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ex_mem_pipeline_register/RegDest_out_reg[2]/CK (DFFR_X1)
+                                                          0.00 #     0.00 r
+  ex_mem_pipeline_register/RegDest_out_reg[2]/Q (DFFR_X1)
+                                                          0.12       0.12 r
+  U5011/ZN (NOR4_X1)                                      0.04       0.16 f
+  U4954/ZN (AOI21_X1)                                     0.09       0.25 r
+  U6999/ZN (OAI221_X1)                                    0.06       0.31 f
+  U7000/ZN (NOR3_X1)                                      0.08       0.40 r
+  U7001/ZN (NOR3_X1)                                      0.03       0.43 f
+  U7008/ZN (INV_X1)                                       0.03       0.46 r
+  U7009/ZN (NOR2_X1)                                      0.05       0.50 f
+  U4928/Z (BUF_X1)                                        0.11       0.61 f
+  U7010/ZN (NAND2_X1)                                     0.05       0.67 r
+  U7011/ZN (AND2_X1)                                      0.04       0.71 r
+  U7012/ZN (NAND2_X1)                                     0.05       0.76 f
+  U7015/ZN (NAND2_X1)                                     0.12       0.88 r
+  U4964/ZN (NAND2_X2)                                     0.15       1.03 f
+  U7345/ZN (NOR2_X1)                                      0.20       1.24 r
+  U4926/Z (BUF_X1)                                        0.16       1.39 r
+  U7462/ZN (NOR2_X1)                                      0.05       1.44 f
+  U7463/Z (XOR2_X1)                                       0.08       1.52 f
+  DP_OP_168J1_122_4392/U33/CO (FA_X1)                     0.10       1.62 f
+  DP_OP_168J1_122_4392/U32/CO (FA_X1)                     0.09       1.71 f
+  DP_OP_168J1_122_4392/U31/CO (FA_X1)                     0.09       1.80 f
+  DP_OP_168J1_122_4392/U30/CO (FA_X1)                     0.09       1.89 f
+  DP_OP_168J1_122_4392/U29/CO (FA_X1)                     0.09       1.98 f
+  DP_OP_168J1_122_4392/U28/CO (FA_X1)                     0.09       2.07 f
+  DP_OP_168J1_122_4392/U27/CO (FA_X1)                     0.09       2.16 f
+  DP_OP_168J1_122_4392/U26/CO (FA_X1)                     0.09       2.25 f
+  DP_OP_168J1_122_4392/U25/CO (FA_X1)                     0.09       2.34 f
+  DP_OP_168J1_122_4392/U24/CO (FA_X1)                     0.09       2.43 f
+  DP_OP_168J1_122_4392/U23/CO (FA_X1)                     0.09       2.52 f
+  DP_OP_168J1_122_4392/U22/CO (FA_X1)                     0.09       2.61 f
+  DP_OP_168J1_122_4392/U21/CO (FA_X1)                     0.09       2.70 f
+  DP_OP_168J1_122_4392/U20/CO (FA_X1)                     0.09       2.79 f
+  DP_OP_168J1_122_4392/U19/CO (FA_X1)                     0.09       2.89 f
+  DP_OP_168J1_122_4392/U18/CO (FA_X1)                     0.09       2.98 f
+  DP_OP_168J1_122_4392/U17/CO (FA_X1)                     0.09       3.07 f
+  DP_OP_168J1_122_4392/U16/CO (FA_X1)                     0.09       3.16 f
+  DP_OP_168J1_122_4392/U15/CO (FA_X1)                     0.09       3.25 f
+  DP_OP_168J1_122_4392/U14/CO (FA_X1)                     0.09       3.34 f
+  DP_OP_168J1_122_4392/U13/CO (FA_X1)                     0.09       3.43 f
+  DP_OP_168J1_122_4392/U12/CO (FA_X1)                     0.09       3.52 f
+  DP_OP_168J1_122_4392/U11/CO (FA_X1)                     0.09       3.61 f
+  DP_OP_168J1_122_4392/U10/CO (FA_X1)                     0.09       3.70 f
+  DP_OP_168J1_122_4392/U9/CO (FA_X1)                      0.09       3.79 f
+  DP_OP_168J1_122_4392/U8/CO (FA_X1)                      0.09       3.88 f
+  DP_OP_168J1_122_4392/U7/CO (FA_X1)                      0.09       3.97 f
+  DP_OP_168J1_122_4392/U6/CO (FA_X1)                      0.09       4.06 f
+  DP_OP_168J1_122_4392/U5/CO (FA_X1)                      0.09       4.15 f
+  DP_OP_168J1_122_4392/U4/CO (FA_X1)                      0.09       4.24 f
+  DP_OP_168J1_122_4392/U3/S (FA_X1)                       0.13       4.38 r
+  U7481/ZN (NAND2_X1)                                     0.03       4.40 f
+  U7485/ZN (OAI211_X1)                                    0.04       4.44 r
+  ex_mem_pipeline_register/ALU_output_out_reg[30]/D (DFFR_X1)
+                                                          0.01       4.45 r
+  data arrival time                                                  4.45
+
+  clock MY_CLK (rise edge)                                5.12       5.12
+  clock network delay (ideal)                             0.00       5.12
+  clock uncertainty                                      -0.07       5.05
+  ex_mem_pipeline_register/ALU_output_out_reg[30]/CK (DFFR_X1)
+                                                          0.00       5.05 r
+  library setup time                                     -0.04       5.01
+  data required time                                                 5.01
+  --------------------------------------------------------------------------
+  data required time                                                 5.01
+  data arrival time                                                 -4.45
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.57
+
+
+1
